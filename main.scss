@@ -1,0 +1,167 @@
+//@import
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variabelen
+$primary-color: blue;
+$secondary-color: green;
+$tertiary-color: yellow;
+$quaternary-color: red;
+$font-size: 20px;
+
+// Type variabelen
+$border-size: 2px solid;
+$font-family: Arial, sans-serif;
+$padding-size: 10px;
+
+%button-style {
+    border: $border-size $primary-color;
+    font-family: $font-family;
+    padding: $padding-size;
+}
+
+//@extend
+button {
+    @extend %button-style;
+    background-color: $secondary-color;
+}
+
+//@media
+@media (max-width: 768px) {
+    button {
+        font-size: $font-size - 2;
+        background-color: $secondary-color;
+        border: $border-size $tertiary-color; 
+    }
+}
+
+@media (min-width: 768px) {
+    button {
+        background-color: $quaternary-color;
+    }
+}
+
+//genestelde elementen
+main{
+    font-size: 15px;
+  
+    article {
+        color: cadetblue;
+    }
+
+    section {
+        color: brown;
+      }
+
+  }
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 50vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'item1 item1 item1 item1 item1 item1'
+        'item2 item2 item3 item3 item4 item4';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 10px;
+}
