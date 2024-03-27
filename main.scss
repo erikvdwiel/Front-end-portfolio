@@ -26,6 +26,13 @@ button {
 }
 
 //@media
+@media (max-width: 1000px) {
+    .grid-container {
+        padding: 50px !important;
+        height: 270px;
+    }
+}
+
 @media (max-width: 768px) {
     button {
         font-size: $font-size - 2;
